@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang= "en">
+<head>
+  <meta charset="utf-8">
+  <title>BackboneTutorial</title>
+  <link rel="styleshet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrao/2.1.1/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+  	<h1>User Manager</h1>
+  	<hr />
+  	<div class="page"></div>
+  </div>
+
+
+
+  <script scr="//cdnjs.cloudflare.com/ajax/libs/jqery/1.8.2/jquery.min.js"></script>
+  <script scr="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore.min.js"></script>
+  <script scr="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone.min.js"></script>
+  <script>
+    var Router = Backbone.Router.extend({
+      routes: {
+      	'': 'home'
+      }	
+    });
+    var router = new Router();
+    router.on('route:home', function () {
+      console.log('We have loaded the home page');	
+    });
+
+    Backbone.history.start();
+
+  </script>
+</body>
+</html>
+  
